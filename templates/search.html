@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Search</h1>
+<form action="{{ url_for('results') }}" method="post" class="form-inline">
+    <div class="form-group">
+        <input type="text" class="form-control" id="searchInput" name="search-keyword" placeholder="Search books">
+    </div>
+    <select name="search-by" id="search" class="form-control">
+        <option value="isbn">ISBN Number</option>
+        <option value="title" selected>Title</option>
+        <option value="author">Author</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

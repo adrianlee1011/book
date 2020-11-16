@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>User: {{ user.username }}</h1>
+{% for review in reviews %}
+<ul>
+    <li>
+        <a href="{{ url_for('get_book_details', isbn=review.book) }}">
+            Book: {{ review.book }}
+            Rating: {{ review.rating }}
+            Review: {{ review.review }}
+        </a>
+    </li>
+</ul>
+{% endfor %}
+{% endblock %}

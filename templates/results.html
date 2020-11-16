@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Showing books of "{{ keyword }}" in {{ choice }}:</h1>
+{% for book in books %}
+    <ul>
+        <li><a href="{{ url_for('get_book_details', isbn=book.isbn) }}">{{ book.title }}</a></li>
+    </ul>
+{% endfor %}
+{% endblock %}

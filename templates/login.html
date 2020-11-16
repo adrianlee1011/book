@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <form action="{{ url_for('index') }}" method="post">
+        <div class="form-group">
+            <label for="usernameInput">Username</label>
+            <input name="username" type="text" placeholder="Enter username" id="usernameInput" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
